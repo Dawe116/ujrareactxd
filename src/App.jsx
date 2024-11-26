@@ -1,8 +1,8 @@
 import { BrowserRouter as Router,NavLink, Routes, Route } from 'react-router-dom';  
 import './App.css';
-import {ChessList} from './ChessList';
-import {ChessCreate} from './ChessCreate';
-import {ChessSingle} from './ChessSingle';
+import {DartsList} from './DartsList';
+import {DartsCreate} from './DartsCreate';
+import {DartsSingle} from './DartsSingle';
 
 export const App= () =>  {
   return (
@@ -12,16 +12,16 @@ export const App= () =>  {
           <ul className='navbar-nav'>
             <li className='nav-item'>
               <NavLink className='nav-link' to='/'>
-              <span className='nav-link'>Sakkozók</span>
+              <span className='nav-link'>Dartsozók</span>
               </NavLink>
             </li>
           </ul>
         </div>
       </nav>
         <Routes>
-          <Route path='/' element={<ChessList />} />
-          <Route path='/chess-create' element={<ChessCreate />} />
-          <Route path='/chess/:chessId' element={<ChessSingle />} />
+          <Route path='/' element={<DartsList />} />
+          <Route path='/darts-create' element={<DartsCreate />} />
+          <Route path='/darts/:dartsId' element={<DartsSingle />} />
         </Routes>
       </Router>
   );
