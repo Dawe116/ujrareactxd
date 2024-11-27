@@ -36,7 +36,7 @@ return(
                <h2>Dártszozók</h2> 
                 {dartsers.map((darts, index) => (
                     <div className="card col-sm-3 d-inline-block m-1 p-2">
-                        <p className="text-dark">Sakkozók-neve: {darts.name}</p>
+                        <p className="text-dark">Dártsozó-neve: {darts.name}</p>
                         <p className="text-dark">Születési éve: {darts.birth_date}</p>
                         <p className="text-dark">Nyert világbajnokságok: {darts.world_ch_won}</p>
                         <div className="card-body">

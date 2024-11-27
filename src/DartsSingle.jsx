@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState, useEffect} from 'react';
 import { useParams, Link } from 'react-router-dom';
 
@@ -11,9 +12,8 @@ useEffect(() => {
     {(async () => {
         setPending(true);
         try {
-            const response = await fetch(`https://darts.sulla.hu/darts/${id}`)
-            const result = await response.json();
-            setDarts(result);
+            const response = await axios.get(`https://darts.sulla.hu/darts/${id}`)
+            setDarts(response.data);
         }
         catch(error) {
             console.log("Hiba: ", error);
